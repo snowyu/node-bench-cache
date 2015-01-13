@@ -21,9 +21,9 @@ benchmark = (run)->
   console.log("Heap Used: " + (heapUsed / 1024) + "KB")
   console.log("Time Cost: " + (diff[0]*1e3+diff[1] / 1e6) + " ms\n")
   ###
-  memory: (usedMem / 1024)
-  heapTotal: (heapTotal / 1024)
-  heapUsed: (heapUsed / 1024)
+  memory: (usedMem / 1024 / 1024)
+  heapTotal: (heapTotal / 1024 / 1024)
+  heapUsed: (heapUsed / 1024 / 1024)
   time: (diff[0]*1e3+diff[1] / 1e6)
 
 
@@ -69,7 +69,7 @@ allTypes  = ['add', 'update', 'get', 'del', 'clear']
 
 toArray = (item, type)->
   for i in allTypes
-    item[i][type].toFixed(2)
+    item[i][type].toFixed(3)
 toColumn = (cache, type)->
   result={}
   result[cache.name] = toArray(cache, type)
@@ -88,11 +88,11 @@ toTable = (typeName, type, style)->
     result.push toColumn i, type
   result
 
-table = toTable "Heap Total(KB)", "heapTotal"
+table = toTable "Heap Total(MB)", "heapTotal"
 console.log(table.toString())
-table = toTable "Heap Used(KB)", "heapUsed"
+table = toTable "Heap Used(MB)", "heapUsed"
 console.log(table.toString())
-table = toTable "Memory Used(KB)", "memory"
+table = toTable "Memory Used(MB)", "memory"
 console.log(table.toString())
 
 table = toTable "Time Cost(ms)", "time"
