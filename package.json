@@ -4,7 +4,9 @@
   "description": "benchmark cache",
   "homepage": "https://github.com/snowyu/node-bench-cache",
   "main": "./benchmark",
-  "bin": {"bench": "./benchmark"},
+  "bin": {
+    "bench": "./benchmark"
+  },
   "files": [
     "README.md",
     "LICENSE-MIT",
@@ -26,9 +28,11 @@
     "cli-table": "~0.3.1",
     "lru-cache": "~2.5.0",
     "secondary-cache": "~1.1.0",
-    "simple-lru-cache": "~0.0.1"
+    "simple-lru-cache": "0.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "pre-commit": "0.0.9"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/snowyu/node-bench-cache"
