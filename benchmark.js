@@ -32,9 +32,9 @@
       console.log("Heap Used: " + (heapUsed / 1024) + "KB")
       console.log("Time Cost: " + (diff[0]*1e3+diff[1] / 1e6) + " ms\n")
        */
-      memory: usedMem / 1024,
-      heapTotal: heapTotal / 1024,
-      heapUsed: heapUsed / 1024,
+      memory: usedMem / 1024 / 1024,
+      heapTotal: heapTotal / 1024 / 1024,
+      heapUsed: heapUsed / 1024 / 1024,
       time: diff[0] * 1e3 + diff[1] / 1e6
     };
   };
@@ -101,7 +101,7 @@
     _results = [];
     for (_i = 0, _len = allTypes.length; _i < _len; _i++) {
       i = allTypes[_i];
-      _results.push(item[i][type].toFixed(2));
+      _results.push(item[i][type].toFixed(3));
     }
     return _results;
   };
@@ -132,15 +132,15 @@
     return result;
   };
 
-  table = toTable("Heap Total(KB)", "heapTotal");
+  table = toTable("Heap Total(MB)", "heapTotal");
 
   console.log(table.toString());
 
-  table = toTable("Heap Used(KB)", "heapUsed");
+  table = toTable("Heap Used(MB)", "heapUsed");
 
   console.log(table.toString());
 
-  table = toTable("Memory Used(KB)", "memory");
+  table = toTable("Memory Used(MB)", "memory");
 
   console.log(table.toString());
 
