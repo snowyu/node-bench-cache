@@ -1,6 +1,6 @@
 {
   "name": "bench-cache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "benchmark cache",
   "homepage": "https://github.com/snowyu/node-bench-cache",
   "main": "./benchmark",
@@ -27,7 +27,7 @@
   "dependencies": {
     "cli-table": "~0.3.1",
     "lru-cache": "~2.5.0",
-    "secondary-cache": "~1.1.0",
+    "secondary-cache": "~1.1.1",
     "simple-lru-cache": "0.0.1"
   },
   "devDependencies": {
