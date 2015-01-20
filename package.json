@@ -1,12 +1,9 @@
 {
   "name": "bench-cache",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "benchmark cache",
   "homepage": "https://github.com/snowyu/node-bench-cache",
   "main": "./benchmark",
-  "bin": {
-    "bench": "./benchmark"
-  },
   "files": [
     "README.md",
     "LICENSE-MIT",
